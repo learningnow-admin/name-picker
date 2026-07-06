@@ -1,0 +1,9 @@
+{:deps    {:aliases [:dev]}
+ :dev-http {8080 "public"}
+ :builds
+ {:app {:target      :browser
+        :output-dir  "public/js"
+        :asset-path  "/js"
+        :modules     {:main {:entries [namepicker.core]
+                              :init-fn namepicker.core/run}}
+        :devtools    {:preloads [re-frame2-pair.runtime]}}}}

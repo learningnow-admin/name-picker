@@ -1,0 +1,31 @@
+{:paths ["src"
+         ;; Local-dev linked checkout of the (unreleased) re-frame2-pair
+         ;; preload — see skills/re-frame2-pair/SKILL.md "Local-dev / linked
+         ;; checkouts" in the re-frame2 repo. Swap for
+         ;; "node_modules/@day8/re-frame2-pair/preload" once
+         ;; @day8/re-frame2-pair ships on npm.
+         "/home/noah/.gitlibs/libs/day8/re-frame2/a2b18adf27369165758ae8a2faf50ead8b8bdb73/skills/re-frame2-pair/preload"]
+
+ :deps
+ {org.clojure/clojure       {:mvn/version "1.12.0"}
+  reagent/reagent           {:mvn/version "2.0.1"}
+  day8/re-frame2            {:git/url  "https://github.com/day8/re-frame2.git"
+                              :git/sha  "a2b18adf27369165758ae8a2faf50ead8b8bdb73"
+                              :deps/root "implementation/core"}
+  day8/re-frame2-reagent    {:git/url  "https://github.com/day8/re-frame2.git"
+                              :git/sha  "a2b18adf27369165758ae8a2faf50ead8b8bdb73"
+                              :deps/root "implementation/adapters/reagent"}
+  ;; The two below are pulled in transitively by the (unreleased,
+  ;; local-dev-only) re-frame2-pair preload, which requires
+  ;; re-frame.schemas and re-frame.machines regardless of whether this
+  ;; app itself uses schemas or state machines.
+  day8/re-frame2-schemas    {:git/url  "https://github.com/day8/re-frame2.git"
+                              :git/sha  "a2b18adf27369165758ae8a2faf50ead8b8bdb73"
+                              :deps/root "implementation/schemas"}
+  metosin/malli             {:mvn/version "0.20.1"}
+  day8/re-frame2-machines   {:git/url  "https://github.com/day8/re-frame2.git"
+                              :git/sha  "a2b18adf27369165758ae8a2faf50ead8b8bdb73"
+                              :deps/root "implementation/machines"}}
+
+ :aliases
+ {:dev {:extra-deps {thheller/shadow-cljs {:mvn/version "3.4.11"}}}}}
