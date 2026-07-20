@@ -280,3 +280,39 @@ body {
 .picked-display strong {
   color: var(--accent-dark);
 }
+
+/* -- Mobile ------------------------------------------------------------------ */
+
+@media (max-width: 480px) {
+  .namepicker {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .picker-panel {
+    padding: 1rem 1.1rem 1.25rem;
+  }
+
+  .add-class,
+  .add-student {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-class button,
+  .add-student button {
+    width: 100%;
+  }
+
+  .pick-controls {
+    flex-direction: column;
+  }
+
+  .student-row {
+    flex-wrap: wrap;
+  }
+
+  .student-picks {
+    flex-basis: 100%;
+    order: 1;
+  }
+}
