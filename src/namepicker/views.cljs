@@ -110,6 +110,7 @@
 
 (rf/reg-view app []
   [:div.namepicker
+   [:a.back-home {:href "https://learningnow.com.au/"} "← Learning Now"]
    [:h1 "Name Picker"]
    [class-tabs]
    [add-class-form]

@@ -35,6 +35,19 @@ body {
   color: var(--accent-dark);
 }
 
+.back-home {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.back-home:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
 /* -- Class tabs ----------------------------------------------------------- */
 
 .class-tabs {
